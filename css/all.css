@@ -393,9 +393,11 @@ header:after{
 	max-width:370px;
 }
 .gallery-area .slides .txt-box h2{
-	margin:0 0 13px;
+	margin:0 0 13px; 
 	font:300 45px/50px "Open Sans", Arial, Helvetica, sans-serif;
 }
+.gallery-area .slides .txt-box a { text-decoration:none; }
+
 .gallery-area .flex-control-paging{
 	margin:0;
 	padding:0;
