@@ -14,6 +14,7 @@ $(document).ready(function(){
 	MainTabs();
 	MoreSlide();
 	DropShow();
+	MoreSlideDown();
 });
 
 function ClearField(){
@@ -95,5 +96,21 @@ function DropShow(){
 		if($(this).siblings('li').hasClass('active')){
 			$(this).siblings('li').removeClass('active');
 		}
+	});
+}
+
+function MoreSlideDown(){
+	$('.side-link-box .btn-more').click(function(){
+		if(!$(this).hasClass('hide')){
+			$(this).addClass('hide');
+			$(this).html('Hide');
+			$(this).closest('.side-link-box').find('li.hidden').stop(true, true).slideDown(350);
+		}
+		else{
+			$(this).removeClass('hide');
+			$(this).html('More');
+			$(this).closest('.side-link-box').find('li.hidden').stop(true, true).slideUp(350);
+		}
+		return false;
 	});
 }
