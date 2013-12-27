@@ -15,6 +15,13 @@ $(document).ready(function(){
 	MoreSlide();
 	DropShow();
 	MoreSlideDown();
+	
+	$('.btn-to-top').click(function(){
+		$('body,html').animate({
+			scrollTop: 0
+		}, 400);
+		return false;
+	});
 });
 
 function ClearField(){
@@ -110,6 +117,44 @@ function MoreSlideDown(){
 			$(this).removeClass('hide');
 			$(this).html('More');
 			$(this).closest('.side-link-box').find('li.hidden').stop(true, true).slideUp(350);
+		}
+		return false;
+	});
+	
+	$('.faqs-section .link-expand').click(function(){
+		if(!$(this).hasClass('hide')){
+			$(this).addClass('hide');
+			$(this).html('Collapse');
+			$(this).closest('.txt-box').find('.hide-box').stop(true, true).slideDown(350);
+		}
+		else{
+			$(this).removeClass('hide');
+			$(this).html('Expand');
+			$(this).closest('.txt-box').find('.hide-box').stop(true, true).slideUp(350);
+		}
+		return false;
+	});
+	
+	$('.add-lst-btn a.expand').click(function(){
+		$(this).closest('.add-content-area').find('.link-expand').html('Collapse').addClass('hide');
+		$('.hide-box').slideDown(350);
+		return false;
+	});
+	
+	$('.add-lst-btn a.collapse').click(function(){
+		$(this).closest('.add-content-area').find('.link-expand').html('Expand').removeClass('hide');
+		$('.hide-box').slideUp(350);
+		return false;
+	});
+	
+	$('.faq-lst .link').click(function(){
+		if(!$(this).hasClass('hide')){
+			$(this).addClass('hide');
+			$(this).closest('li').find('.hidden-block').stop(true, true).slideDown(350);
+		}
+		else{
+			$(this).removeClass('hide');
+			$(this).closest('li').find('.hidden-block').stop(true, true).slideUp(350);
 		}
 		return false;
 	});
