@@ -137,6 +137,7 @@ header:after{
 }
 .h-row{
 	position:relative;
+	z-index:100;
 	background:url(../images/bg-h-row.png) repeat-x 0 100%;
 	margin:0 0 15px;
 	padding:0 0 1px;
@@ -641,8 +642,8 @@ header:after{
 	list-style:non;
 	float:left;
 	width:48%;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 }
 .lst-holder li{
 	overflow:hidden;
@@ -683,14 +684,14 @@ header:after{
 .links-lst .txt-box h2{
 	margin:0 0 2px;
 	color:#212121;
-	font-size:19px;
-	line-height:22px;
+	font-size:1.9em;
+	line-height:1.157;
 }
 .links-lst .txt-box h2 .ico{padding:0 0 0 22px;}
 .links-lst .txt-box p{
 	margin:0;
-	font-size:14px;
-	line-height:21px;
+	font-size:1.4em;
+	line-height:1.5;
 	color:#444;
 }
 .links-lst .side-link-box{
@@ -702,8 +703,8 @@ header:after{
 	margin:0;
 	padding:0;
 	list-style:none;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 }
 .links-lst .side-link-box li{
 	padding:0 0 16px;
@@ -721,16 +722,16 @@ header:after{
 	background:#ff9326;
 	margin:0 0 0 7px;
 	color:#222;
-	font-size:10px;
+	font-size:0.714em;
 	font-weight:bold;
-	line-height:13px;
+	line-height:1.3;
 	padding:0 6px;
 }
 .links-lst .side-link-box .btn-more{
 	display:inline-block;
 	vertical-align:top;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 	color:#444;
 	background:url(../images/bg-btn-more.png) no-repeat 100% 50%;
 	padding:0 20px 0 0;
@@ -869,6 +870,7 @@ header:after{
 }
 .drop-box{
 	display:none;
+	overflow:hidden;
 	position:absolute;
 	top:100%;
 	right:0;
@@ -882,6 +884,17 @@ header:after{
 	box-shadow:0 4px 4px -4px #191919;
 	-webkit-box-shadow:0 4px 4px -4px #191919;
 }
+.link-holder .drop-box{
+	right:auto;
+	left:0;
+}
+.link-holder > ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.link-holder > ul > li{position:relative;}
+.link-holder > ul > li.active .drop-box{display:block;}
 .drop-box ul{
 	margin:0;
 	padding:0;
@@ -1017,8 +1030,8 @@ header:after{
 }
 .updates-lst h3{
 	margin:0;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 }
 .updates-lst h3 a{
 	color:#006cd8;
@@ -1061,8 +1074,8 @@ header:after{
 }
 .tools-lst .txt-box h3{
 	margin:0 0 6px;
-	font-size:12px;
-	line-height:14px;
+	font-size:1.2em;
+	line-height:1.166;
 	font-weight:normal;
 }
 .tools-lst .txt-box h3 a{
@@ -1072,15 +1085,14 @@ header:after{
 .tools-lst .txt-box h3 a:hover{text-decoration:underline;}
 .tools-lst .txt-box p{
 	margin:0;
-	font-size:10px;
-	line-height:13px;
+	font-size:1em;
+	line-height:1.3;
 	color:#444;
 }
 .holder-content{padding:0 30px 0 0;}
 /* top-info-block */
 .top-info-block{
 	background:#f8f8f8;
-	overflow:hidden;
 	border-bottom:1px solid #000;
 	border-top:1px solid #ddd;
 	padding:14px 19px 21px;
@@ -1088,16 +1100,18 @@ header:after{
 }
 .top-info-block h2{
 	margin:0 0 2px;
-	font-size:24px;
-	line-height:27px;
+	font-size:2.4em;
+	line-height:1.125;
 }
 .top-info-block p{
 	margin:0 0 22px;
-	font-size:14px;
-	line-height:21px;
+	font-size:1.4em;
+	line-height:1.5;
 }
-.top-info-block .link-row{
-	overflow:hidden;
+.top-info-block .link-row:after{
+	content:"";
+	clear:both;
+	display:block;
 }
 .top-info-block .link-row .ttl{
 	float:left;
@@ -1105,8 +1119,13 @@ header:after{
 	line-height:17px;
 	padding:0 20px 0 0;
 }
-.top-info-block .link-row .link{
+.top-info-block .link-row .link-holder{
 	float:left;
+	position:relative;
+}
+.top-info-block .link-row .link{
+	display:inline-block;
+	vertical-align:top;
 	padding:0 17px 0 0;
 	color:#006cd8;
 	text-decoration:none;
@@ -1120,18 +1139,20 @@ header:after{
 }
 .info-txt-area p{
 	margin:0 0 25px;
-	font-size:14px;
-	line-height:21px;
+	font-size:1.4em;
+	line-height:1.5;
 }
 .info-txt-area h2{
 	margin:0 0 9px;
-	font-size:21px;
-	line-height:24px;
+	font-size:2.1em;
+	line-height:1.14;
 }
 .add-row-info{
 	overflow:hidden;
 	padding:0 8px 58px 0;
 }
+.add-row-info.inner{padding-bottom:0;}
+.add-content-area .add-row-info{padding:0 34px 0 0;}
 .add-row-info .btn-example{
 	float:left;
 	font-size:14px;
@@ -1166,8 +1187,8 @@ header:after{
 .idea-area p,
 .attention-area p{
 	margin:0;
-	font-size:14px;
-	line-height:21px;
+	font-size:1.4em;
+	line-height:1.5;
 }
 .idea-area{
 	background:#fff7c2 url(../images/bg-idea-area.png) no-repeat 19px 17px;
@@ -1226,13 +1247,7 @@ header:after{
 .faqs-area .top-social-lst{padding:18px 0 0;}
 .faqs-area .download{
 	float:left;
-	color:#006cd8;
-	font-size:14px;
-	line-height:17px;
-	background:url(../images/bg-download-link.png) no-repeat 0 1px;
-	padding:0 0 0 24px;
-	text-decoration:none;
-	margin:4px 0 0;
+	margin:6px 0 0;
 }
 .faqs-area .download:hover{text-decoration:underline;}
 .add-lst-btn{
@@ -1277,6 +1292,7 @@ header:after{
 	vertical-align:top;
 	padding:0 0 44px;
 }
+.faqs-section > ul > li.hidden{display:none;}
 .faqs-section .ttl-box{
 	float:left;
 	width:230px;
@@ -1285,8 +1301,8 @@ header:after{
 .faqs-section .ttl-box h3{
 	margin:0;
 	color:#3e4b5d;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 }
 .faqs-section .txt-box{
 	overflow:hidden;
@@ -1294,16 +1310,16 @@ header:after{
 }
 .faqs-section .txt-box p{
 	margin:0 0 5px;
-	font-size:14px;
+	font-size:1.4em;
 	color:#444;
-	line-height:21px;
+	line-height:1.5;
 }
 .faqs-section .txt-box a.link-expand{
 	display:inline-block;
 	vertical-align:top;
 	color:#006cd8;
-	font-size:14px;
-	line-height:17px;
+	font-size:1.4em;
+	line-height:1.214;
 	background:url(../images/bg-btn-arrow-bottom.png) no-repeat 100% 6px;
 	padding:0 17px 0 0;
 	text-decoration:none;
@@ -1332,6 +1348,7 @@ header:after{
 	padding:0 23px 0 0;
 	background:url(../images/bg-btn-arrow-bottom02.png) no-repeat 100% 13px;
 }
+.btn-more.active span{background:url(../images/bg-btn-arrow-bottom02-hide.png) no-repeat 100% 13px;}
 .rate-area{
 	border-top:4px solid #ee7a6e;
 	margin:0 25px;
@@ -1595,8 +1612,18 @@ footer{overflow:hidden;}
 		width:90%;
 		padding-bottom:13px;
 	}
+	.gallery-area .slides .txt-box h2{
+		font-size:33px;
+		line-height:38px;
+	}
+	.drop-menu .box{width:27%;}
+	#content{
+		width:74%;
+		margin:0 2% 0 0;
+	}
 }
 @media screen and (max-width: 866px){
+	.drop-menu .box{width:26%;}
 	.f-soc-lst li{width:70px;}
 	.f-area .box{
 		float:none;
@@ -1613,7 +1640,14 @@ footer{overflow:hidden;}
 		margin:0 0 5px;
 	}
 	.info-lst .add-txt{text-align:left;}
-	
+	.logo{
+		float:none;
+		position:absolute;
+		top:10px;
+		left:0;
+	}
+	.h-top-hold{padding-top:5px;}
+	.search-form{padding-bottom:15px;}
 }
 @media screen and (max-width: 806px){
 
