@@ -84,7 +84,6 @@ header{
 	padding:0 0 10px;
 }
 .search-form .holder{float:right;}
-.search-form legend { visibility:hidden; display:none; }
 .search-form label {
 	background:url(../images/bg-btn-search.gif) no-repeat;
 	float:left;
@@ -1566,7 +1565,7 @@ footer{overflow:hidden;}
 	color:#444;
 	line-height:13px;
 }
-
+legend { visibility:hidden; display:none; }
 header:after, .h-row:after, #nav > ul:after, #main:after, .top-info-block .link-row:after {
 	content:""; clear:both; display:block;
 }
