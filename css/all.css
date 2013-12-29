@@ -47,12 +47,7 @@ input[type=text], input[type=email], input[type=reset], input[type=button], inpu
 header{
 	position:relative;
 	z-index:1000;
-	padding:24px 0 0;
-}
-header:after{
-	content:"";
-	clear:both;
-	display:block;
+	padding:10px 0 0;
 }
 .h-area{
 	overflow:hidden;
@@ -142,11 +137,6 @@ header:after{
 	margin:0 0 15px;
 	padding:0 0 1px;
 }
-.h-row:after{
-	content:"";
-	clear:both;
-	display:block;
-}
 #nav{
 	float:left;
 }
@@ -157,11 +147,6 @@ header:after{
 	font-size:16px;
 	line-height:19px;
 	font-weight:bold;
-}
-#nav > ul:after{
-	content:"";
-	clear:both;
-	display:block;
 }
 #nav > ul > li{float:left;}
 #nav > ul >  li.item01{border-top:4px solid #ff9326;}
@@ -353,11 +338,6 @@ header:after{
 	margin:0 0 21px;
 	position:relative;
 	z-index:1;
-}
-#main:after{
-	content:"";
-	clear:both;
-	display:block;
 }
 /* content */
 #content{
@@ -1104,11 +1084,6 @@ header:after{
 	font-size:1.4em;
 	line-height:1.5;
 }
-.top-info-block .link-row:after{
-	content:"";
-	clear:both;
-	display:block;
-}
 .top-info-block .link-row .ttl{
 	float:left;
 	font-size:14px;
@@ -1592,6 +1567,11 @@ footer{overflow:hidden;}
 	color:#444;
 	line-height:13px;
 }
+
+header:after, .h-row:after, #nav > ul:after, #main:after, .top-info-block .link-row:after {
+	content:""; clear:both; display:block;
+}
+
 /* responsive layout */
 @media screen and (max-width: 998px){
 	#wrapper{padding:0 3px;}
