@@ -6,6 +6,7 @@ $(document).ready(function(){
 		slideshowSpeed: 5000
 	});
 	
+	
 	var t_ = $('.flex-control-nav, .flex-direction-nav').clone(true);
 	$('.flex-control-nav, .flex-direction-nav').wrapAll('<div class="pagination-area"></div>');
 	var prev_ = $('.flex-direction-nav .flex-prev').clone(true);

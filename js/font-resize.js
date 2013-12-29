@@ -5,7 +5,7 @@ window.onload = function(){
 var textChanger = {
 	cpanel : 'txt-size',
 	element : 'wrapper',
-	defaultFS : 1,
+	defaultFS : 1, 
 	init: function() {
 		var cpel = document.getElementById(textChanger.cpanel);
 		var el = document.getElementById(textChanger.element);
