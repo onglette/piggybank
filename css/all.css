@@ -89,13 +89,13 @@ header:after{
 	padding:0 0 10px;
 }
 .search-form .holder{float:right;}
-.search-form input[type="submit"]{
-	float:left;
+.search-form legend { visibility:hidden; display:none; }
+.search-form label {
 	background:url(../images/bg-btn-search.gif) no-repeat;
+	float:left;
 	width:20px;
 	height:21px;
 	padding:0;
-	cursor:pointer;
 	text-indent:-9999px;
 	border:0;
 	margin:0 5px 0 0;
@@ -386,19 +386,15 @@ header:after{
 	display:none;
 }
 .gallery-area .slides li:first-child{display:block;}
+.gallery-area .slides a { display:block; text-decoration:none;  }
 .gallery-area .slides .txt-box{
-	position:absolute;
-	top:22px;
-	left:20px;
-	z-index:10;
-	max-width:370px;
+	position:absolute; top:22px; left:20px;
+	z-index:10; max-width:370px;
 }
-.gallery-area .slides .txt-box h2{
-	margin:0 0 13px; 
-	font:300 45px/50px "Open Sans", Arial, Helvetica, sans-serif;
+.gallery-area .slides .txt-box strong{
+	margin:0 0 13px;  font:300 4.5em/1.1 "Open Sans", Arial, Helvetica, sans-serif;
+	display:block;
 }
-.gallery-area .slides .txt-box a { text-decoration:none; }
-
 .gallery-area .flex-control-paging{
 	margin:0;
 	padding:0;
